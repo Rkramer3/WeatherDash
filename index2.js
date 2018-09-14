@@ -15,6 +15,8 @@ function loadWeather() {
   var uv = $("#uv");
   var hum = $("#hum");
   var cc = $("#cc");
+  var moon = $("#moon");
+  var curr = $("#current");
   var url = "https://api.forecast.io/forecast/"; // Dark Sky API url
   var apiKey = "c26fbfd745729f6bd1948a47c486a2f5"; // API key from Dark Sky
 
@@ -30,6 +32,8 @@ function loadWeather() {
         uv.text("" + data.currently.uvIndex + " UV");
         hum.text("" + data.currently.humidity * 100 + "%");
         cc.text("" + data.currently.cloudCover + "%");
+        moon.text("" + data.daily.moonPhase + "m");
+        curr.text("" + data.currently.summary + ".");
       }
     );
   }
@@ -43,10 +47,12 @@ function loadWeather() {
   navigator.geolocation.getCurrentPosition(success, error);
 
   // the text that will be displayed while the function is making the request
-  weather.text("Temperature");
+  weather.text("Temp");
   uv.text("UV");
   hum.text("Humidity");
   cc.text("Cloud");
+  moon.text("moon");
+  curr.text("Summary");
 }
 
 function loadNews() {

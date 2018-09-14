@@ -32,8 +32,19 @@ h2,
   background-color: #5383ec;
   box-shadow: 2px 2px 2.5px grey;
 }
-.odd {
+.odd h1 {
   font-size: 48px;
+}
+.even h1 {
+  font-size: 48px;
+}
+.odd p {
+  color: #545861;
+}
+.even p {
+  color: #545861;
+}
+.odd {
   padding: 70px;
   text-align: center;
   width: 100px;
@@ -43,7 +54,6 @@ h2,
   color: #fefefd;
 }
 .even {
-  font-size: 48px;
   padding: 70px;
   text-align: center;
   width: 100px;
@@ -53,6 +63,42 @@ h2,
   color: #fefefd;
 }
 .odd:hover {
+  margin: 0;
+  position: relative;
+  border-bottom: 4px solid #00FFF4;
+  box-shadow: 10px 10px 5px grey;
 }
 .odd:hover:before {
+  position: absolute;
+  background: #C0C5FD;
+  height: 4px;
+  content: '';
+  width: 115px;
+  bottom: -4px;
+  left: 0;
+}
+.even:hover {
+  margin: 0;
+  position: relative;
+  border-bottom: 4px solid #00FFF4;
+  box-shadow: 10px 10px 5px grey;
+}
+.even:hover:before {
+  position: absolute;
+  background: #C0C5FD;
+  height: 4px;
+  content: '';
+  width: 115px;
+  bottom: -4px;
+  left: 0;
+}
+.oddtwo {
+  font-size: 48px;
+  padding: 70px;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border: 0px solid;
+  background-color: #323841;
+  color: #fefefd;
 }
